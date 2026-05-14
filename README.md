@@ -18,17 +18,17 @@ There are plenty of confetti libraries out there. This one is for you if you car
 ## 📦 Install
 
 ```bash
-bun add @LynxExt/react-confetti
+bun add @lynxext/react-confetti
 # or
-npm install @LynxExt/react-confetti
+npm install @lynxext/react-confetti
 # or
-pnpm add @LynxExt/react-confetti
+pnpm add @lynxext/react-confetti
 ```
 
 ## 🚀 Quick start
 
 ```tsx
-import Confetti from "@LynxExt/react-confetti";
+import Confetti from "@lynxext/react-confetti";
 
 function App() {
   return (

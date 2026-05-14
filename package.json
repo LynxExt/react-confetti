@@ -1,9 +1,12 @@
 {
-	"name": "@LynxExt/react-confetti",
+	"name": "@lynxext/react-confetti",
 	"version": "0.1.0",
 	"description": "A tiny, customizable canvas confetti component for React.",
-	"private": true,
 	"type": "module",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com",
+		"access": "public"
+	},
 	"license": "MIT",
 	"author": "LynxExt",
 	"homepage": "https://github.com/LynxExt/react-confetti#readme",
