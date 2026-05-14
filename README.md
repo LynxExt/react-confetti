@@ -17,6 +17,16 @@ There are plenty of confetti libraries out there. This one is for you if you car
 
 ## 📦 Install
 
+This package is published to **GitHub Packages**. You'll need a `.npmrc` in your project root pointing the `@lynxext` scope at the GitHub registry, plus a GitHub Personal Access Token with `read:packages` scope:
+
+```
+# .npmrc
+@lynxext:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+```
+
+Then:
+
 ```bash
 bun add @lynxext/react-confetti
 # or
