@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Biome
+        run: bunx --bun @biomejs/biome check .
+
+      - name: ls-lint
+        run: bun run lint:files
+
+      - name: Typecheck
+        run: bun run typecheck
+
+      - name: Knip
+        run: bun run knip
+
+      - name: Build
+        run: bun run build
+
+      - name: publint
+        run: bun run publint
+
+      - name: attw
+        run: bun run attw
+
+      - name: size-limit
+        run: bun run size

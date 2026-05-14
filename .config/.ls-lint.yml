@@ -1,0 +1,21 @@
+ls:
+  src:
+    .dir: kebab-case
+    .ts: kebab-case
+    .tsx: kebab-case
+    .mdx: kebab-case
+    .css: kebab-case
+    .stories.tsx: kebab-case
+    .types.ts: kebab-case
+
+ignore:
+  - node_modules
+  - dist
+  - storybook-static
+  - .storybook
+  - .config
+  - .changeset
+  - .git
+  - .github
+  - .idea
+  - coverage

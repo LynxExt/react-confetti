@@ -1,0 +1,87 @@
+{
+	"name": "@LynxExt/react-confetti",
+	"version": "0.1.0",
+	"description": "A tiny, customizable canvas confetti component for React.",
+	"private": true,
+	"type": "module",
+	"license": "MIT",
+	"author": "LynxExt",
+	"homepage": "https://github.com/LynxExt/react-confetti#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LynxExt/react-confetti.git"
+	},
+	"bugs": {
+		"url": "https://github.com/LynxExt/react-confetti/issues"
+	},
+	"keywords": ["react", "confetti", "canvas", "celebration", "animation", "particle"],
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"sideEffects": false,
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"lint": "bunx --bun @biomejs/biome lint --write",
+		"format": "bunx --bun @biomejs/biome format --write",
+		"check": "bunx --bun @biomejs/biome check --write",
+		"knip": "knip --config .config/knip.ts",
+		"knip:fix": "knip --config .config/knip.ts --fix",
+		"lint:files": "ls-lint --config .config/.ls-lint.yml",
+		"size": "size-limit --config .config/.size-limit.json",
+		"size:why": "size-limit --config .config/.size-limit.json --why",
+		"build": "NODE_ENV=production bunup",
+		"example": "bun --hot example/server.ts",
+		"changeset": "changeset",
+		"changeset:version": "changeset version",
+		"changeset:publish": "changeset publish",
+		"release:check": "bun run typecheck && bun run knip && bun run build && bun run publint && bun run attw && bun run size",
+		"prepublishOnly": "bun run release:check",
+		"publint": "publint",
+		"attw": "attw --pack .",
+		"postinstall": "LEFTHOOK_CONFIG=.config/lefthook.yml lefthook install"
+	},
+	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.18.2",
+		"@biomejs/biome": "^2.4.15",
+		"@changesets/changelog-github": "^0.7.0",
+		"@changesets/cli": "^2.31.0",
+		"@commitlint/cli": "^21.0.1",
+		"@commitlint/config-conventional": "^21.0.1",
+		"@commitlint/types": "^21.0.1",
+		"@ls-lint/ls-lint": "^2.3.1",
+		"@size-limit/preset-small-lib": "^12.1.0",
+		"@types/bun": "latest",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"bunup": "^0.16.31",
+		"knip": "^6.13.1",
+		"lefthook": "^2.1.6",
+		"publint": "^0.3.21",
+		"react-dom": "^19.2.6",
+		"size-limit": "^12.1.0"
+	},
+	"peerDependencies": {
+		"react": "^19.2.6",
+		"typescript": "^5"
+	},
+	"peerDependenciesMeta": {
+		"typescript": {
+			"optional": true
+		}
+	}
+}

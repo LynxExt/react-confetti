@@ -1,0 +1,38 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"config:recommended",
+		":semanticCommits",
+		":automergePatch",
+		":automergeMinor",
+		":dependencyDashboard"
+	],
+	"platformAutomerge": true,
+	"rangeStrategy": "bump",
+	"schedule": ["before 6am on Monday"],
+	"major": {
+		"dependencyDashboardApproval": true
+	},
+	"packageRules": [
+		{
+			"matchPackagePatterns": ["^@storybook/", "^storybook$"],
+			"groupName": "storybook"
+		},
+		{
+			"matchPackagePatterns": ["^@types/"],
+			"groupName": "types"
+		},
+		{
+			"matchPackagePatterns": ["^@commitlint/"],
+			"groupName": "commitlint"
+		},
+		{
+			"matchPackagePatterns": ["^@vitest/", "^vitest$"],
+			"groupName": "vitest"
+		},
+		{
+			"matchPackageNames": ["react", "react-dom", "@types/react", "@types/react-dom"],
+			"groupName": "react"
+		}
+	]
+}

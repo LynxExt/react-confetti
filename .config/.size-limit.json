@@ -1,0 +1,14 @@
+[
+	{
+		"name": "ESM",
+		"path": "../dist/index.js",
+		"limit": "50 KB",
+		"gzip": true
+	},
+	{
+		"name": "CJS",
+		"path": "../dist/index.cjs",
+		"limit": "50 KB",
+		"gzip": true
+	}
+]
