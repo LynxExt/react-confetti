@@ -1,6 +1,6 @@
 {
 	"name": "@lynxext/react-confetti",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "A tiny, customizable canvas confetti component for React.",
 	"type": "module",
 	"publishConfig": {
@@ -17,7 +17,14 @@
 	"bugs": {
 		"url": "https://github.com/LynxExt/react-confetti/issues"
 	},
-	"keywords": ["react", "confetti", "canvas", "celebration", "animation", "particle"],
+	"keywords": [
+		"react",
+		"confetti",
+		"canvas",
+		"celebration",
+		"animation",
+		"particle"
+	],
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
